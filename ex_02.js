@@ -1,16 +1,13 @@
-let index = 0;
-let lowerCaseHousingToFind = housingToFind.toLowerCase();
-
-while (index < housingList.length) {
-	if (housingList[index].toLowerCase() === lowerCaseHousingToFind) {
-		return [index + 1, housingList[index]];
+function findHousing(housingToFind, housingList) {
+    housingToFind = housingToFind.toLowerCase();
+    let i = 0;
+    while (i < housingList.length) {
+        if (housingList[i].toLowerCase() === housingToFind) {
+            return [i + 1, housingList[i]];
         }
-        index++;
+        i++;
     }
     return null;
 }
-
-displayResult(findHousing("Igloo", ["Flat", "House", "Hut", "House", "Igloo"]))
-
-//Use console.log to debug you're code ! It is very useful
+ 
 console.log("I'm debugging")
